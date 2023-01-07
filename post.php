@@ -7,30 +7,29 @@
     $keyword = $_POST["keyword"];
     $function = $_POST["function"];
     $note = $_POST["note"];
- 
-    // Umwandeln der Unix Time
-    $start = strtotime($d_start);
-    $end = strtotime($d_end);
 
-    // Ausgabe als lesbares Format
-    $eventstart = date('d.m.Y H:i', $start);
-    $eventend = date('d.m.Y H:i', $end);
+$start = new DateTime($d_start);
+$end = new DateTime($d_end);
 
-    // Berechnung der Einsatzdauer und Ausgabe in Stunden:Minuten
-    // ein Tag hat eine Timestampwert von 3600
-    $diff = ($end - $start)-90000; //eine Stunde und eine Minute (also Stampwert) abziehen, dass die tatsächliche Dauer angezeigt wird
+if($start < $end)
+{
+    $diff = $start->diff($end);
 
-    if($diff < '-3600') //wenn die Differenz kleiner ein Tag ist, zeige nur Stunden und Minuten an
-        {
-            $diff = date('H:i', $diff);
-            echo "Einsatzdauer: $diff";
-        }
+    if($diff->days <= 0) 
+    {
+    $diffFormatted = $diff->format('%H:%I');
+    echo "Einsatzdauer: $diffFormatted";
+    }
     elseif(($diff >= '-3600')) // wenn die Differenz größer ein tag ist, zeige zusätzlich noch einen Tag an
-        {
-            $diff = date('d:H:i', $diff);
-            echo "Einsatzdauer: $diff";
-        }
-
+    {
+    $diffFormatted = $diff->format('%D:%H:%I');
+    echo "Einsatzdauer: $diffFormatted";
+    }
+}
+else
+{
+    echo "Fehler!";
+}
 //    echo "Folgende Werte wurden in die Datenbank übergeben";
 //    echo "$datestart<br>$unit<br>$art<br>$keyword<br>$function<br>$note";
 
