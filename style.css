@@ -47,7 +47,7 @@ main {
 }
 
 aside {
-    background-color: rgba(128, 99, 155, 0.501);
+    background-color: blueviolet;
     grid-row: 3 / 5;
     grid-column: 5 / 6;
 }
