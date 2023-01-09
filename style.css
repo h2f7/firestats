@@ -2,14 +2,14 @@ body {
     background-color: rgb(54, 127, 151);
     width: 90%;
     margin: auto;
-    overflow: hidden;
+    overflow: none;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 5em 3em 1fr 1fr 3em;
-    gap: 1em;
+    grid-template-rows: 15% 10% auto 10%;
+    gap: 0.5em;
 }
 
 .header { 
@@ -46,19 +46,19 @@ nav a {
 
 .main {
     grid-column: 1 / 4;
-    grid-row: 3 / 5;
+    grid-row: 3 / 3;
     background-color: crimson;
 }
 
 .postbox {
     grid-column: 4 / 5;
-    grid-row: 3 / 5;
+    grid-row: 3 / 3;
     background-color: blueviolet;
 }
 
 .footer {
     grid-column: 1 / 5;
-    grid-row: 5 / 5;
+    grid-row: 4 / 4;
     background-color: aquamarine;
     text-align:center;
 }
