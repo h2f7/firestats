@@ -1,5 +1,4 @@
 <html>
-<div class="container">
     <head>
         <title>FireStat</title>
         <link href="style.css" rel="stylesheet">
@@ -7,10 +6,10 @@
     </head>
 
     <body>
-        <div class="header">
+        <header>
             <h1>FireStat</h1>
-        </div>
-        <div class="nav">
+        </header>
+        <nav>
             <ul>
                 <li>
                     <a href="#">Startseite</a>
@@ -19,9 +18,8 @@
                     <a href="report.php">Auswertung</a>
                 </li>
             </ul>
-        </div>
-        
-        <div class="main">
+        </nav>
+        <main>
             <form method="POST" action="post.php">
                 <table>
                     <tr>
@@ -78,13 +76,12 @@
                     </tr>
                 </table>            
             </form>
-        </div>
-        <div class="postbox">
+        </main>
+        <aside>
             InfoBox
-        </div>
-        <div class="footer">
+        </aside>
+        <footer>
             FireStat is copyright by Helge Lachner 2023<br>made with love and passion in hessen
-        </div>
+        </footer>
     </body>
-</div>
 </html>
