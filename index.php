@@ -12,10 +12,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="form.php">Startseite</a>
+                    <a href="#">Startseite</a>
                 </li>
                 <li>
-                    <a href="report.php">Auswertung</a>
+                    <a href="report.php>Auswertung</a>
                 </li>
             </ul>
         </nav>
@@ -77,7 +77,7 @@
                 </table>            
             </form>
         </main>
-        <aside>
+        <aside id="aside">
             InfoBox
         </aside>
         <footer>
